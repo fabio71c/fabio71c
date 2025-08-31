@@ -1,0 +1,131 @@
+/* Jenkins Test Page Styles */
+
+/* Additional styles for enhanced functionality */
+.test-button {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.test-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.test-button:active {
+    transform: translateY(0);
+}
+
+/* Jenkins status indicators */
+.jenkins-status {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.status-item {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 5px;
+    min-width: 120px;
+}
+
+.status-item.success {
+    border-left: 5px solid #4CAF50;
+}
+
+.status-item.warning {
+    border-left: 5px solid #FF9800;
+}
+
+.status-item.error {
+    border-left: 5px solid #f44336;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .jenkins-status {
+        flex-direction: column;
+    }
+}
+
+/* Animation for loading states */
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Jenkins build progress bar */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+/* Console output styling */
+.console-output {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #333;
+}
+
+.console-output .log-entry {
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+.console-output .log-entry.info {
+    color: #00ff00;
+}
+
+.console-output .log-entry.warning {
+    color: #ffff00;
+}
+
+.console-output .log-entry.error {
+    color: #ff0000;
+}
